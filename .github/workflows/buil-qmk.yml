@@ -17,14 +17,14 @@ jobs:
         run: git config --global --add safe.directory '*'
 
       - name: Download QMK
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: qmk/qmk_firmware
           submodules: recursive
           path: qmk_firmware
 
       - name: Download my Hackpad repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: hackpad_repo
 
@@ -38,7 +38,7 @@ jobs:
         run: qmk compile -kb my_hackpad -km default
 
       - name: Save UF2 firmware
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: my-hackpad-firmware
           path: qmk_firmware/*.uf2
