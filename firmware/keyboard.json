@@ -20,6 +20,11 @@
         "cols": ["GP26", "GP28", "GP29"]
     },
 
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP27"
+    },
+    
     "features": {
         "bootmagic": true,
         "extrakey": true
