@@ -25,6 +25,20 @@
         "pin": "GP27"
     },
     
+    "rgblight": {
+        "led_count": 4,
+        "animations": {
+            "breathing": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true
+        },
+        "default": {
+            "on": true,
+            "animation": "rainbow_mood",
+            "val": 120
+        }
+    },
+
     "features": {
         "bootmagic": true,
         "extrakey": true
