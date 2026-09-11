@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool oled_task_user(void) {
     oled_write_ln("MY HACKPAD", false);
 
-    if (get_higtest_layer(layer_state) == 1){
+    if (get_highest_layer(layer_state) == 1){
         oled_write_ln("RGB CONTROL", false);
     } else {
         oled_write_ln("READY", false);
