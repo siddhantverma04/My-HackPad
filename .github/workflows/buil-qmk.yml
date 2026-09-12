@@ -3,7 +3,7 @@ name: Build QMK firmware
 on:
   push:
     paths:
-      - "firmware/**"
+      - "Firmware/**"
       - ".github/workflows/build-qmk.yml"
   workflow_dispatch:
 
@@ -31,8 +31,7 @@ jobs:
       - name: Copy my keyboard into QMK
         run: |
           mkdir -p qmk_firmware/keyboards/my_hackpad
-          cp -R hackpad_repo/firmware/. qmk_firmware/keyboards/my_hackpad/
-
+          cp -R hackpad_repo/Firmware/. qmk_firmware/keyboards/my_hackpad/
       - name: Compile firmware
         working-directory: qmk_firmware
         run: qmk compile -kb my_hackpad -km default
