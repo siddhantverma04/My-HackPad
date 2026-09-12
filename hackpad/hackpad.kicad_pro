@@ -537,7 +537,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "C:/Users/pv/Downloads/kicad_care_package/kicad_care_package/footprints.pretty/My HackPad/hackpad/gerber output/",
       "specctra_dsn": "",
       "step": "../../../../../hackpadv4.stl",
       "vrml": ""
