@@ -11,4 +11,4 @@ QMK firmware for my custom 3x3 Hackpad.
 
 ## Firmware
 
-Firmware is built using QMK.
+Firmware is built using QMK Firmware.
