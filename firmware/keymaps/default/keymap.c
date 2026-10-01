@@ -6,7 +6,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         C(KC_C),  C(KC_V),  KC_ESC,
         KC_L,     KC_UP,    KC_E,
-        KC_LEFT,  KC_DOWN,  LT(1, KC_RGHT)
+        KC_LEFT,  KC_DOWN,  KC_RGHT
     ),
 
     [1] = LAYOUT(
@@ -141,9 +141,25 @@ static void draw_figure(const pose_t *p, bool happy, bool tear) {
     draw_line(hipx, HIP_Y, hipx + p->rfx, HIP_Y + FOOT_DY);
 }
 
-// ---- Count every key press as "energy" ----
+// ---- Key handling ----
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    static bool right_held = false;
+    uint8_t row = record->event.key.row;
+    uint8_t col = record->event.key.col;
+
+    // remember whether key 9 (bottom-right) is being held
+    if (row == 2 && col == 2) {
+        right_held = record->event.pressed;
+    }
+
     if (record->event.pressed) {
+        // hold 9, then press 1 (top-left): toggle RGB control layer
+        if (row == 0 && col == 0 && right_held) {
+            layer_invert(1);
+            return false;
+        }
+
+        // every other press feeds the stick figure's energy
         energy += ENERGY_PER_PRESS;
         if (energy > ENERGY_MAX) energy = ENERGY_MAX;
         last_press  = timer_read32();
