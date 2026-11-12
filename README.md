@@ -47,6 +47,13 @@ Current normal keymap:
 Holding key 9 opens an RGB-control layer for changing effects,
 hue, saturation, and brightness.
 
+## Fully assembled!
+
+The final and fully assembled hackpad!
+
+<img width="696" height="877" alt="image" src="https://github.com/user-attachments/assets/7eb9d74a-3fb8-4b53-b811-36132648b88f" />
+
+
 ## Bill of Materials
 
 | Component | Amount |
