@@ -5,6 +5,9 @@ A custom 3×3 macropad designed from scratch using KiCad, Fusion 360, and QMK.
 The HackPad uses a Seeed Studio XIAO RP2040, 9 mechanical switches,
 4 SK6812MINI-E RGB LEDs, a 128×32 OLED display, and custom QMK firmware.
 
+Check out the demo video here:
+https://www.youtube.com/watch?v=4vWcCvnd2rU
+
 ## Features
 
 - 3×3 mechanical key layout
